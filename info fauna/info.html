@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <title>Fauna de México</title>
+    <style>
+        body { font-family: Arial, sans-serif; padding: 20px; }
+        a.logout { display: inline-block; margin-top: 20px; background: #d33; color: white; padding: 8px 12px; text-decoration: none; border-radius: 4px; }
+    </style>
+</head>
+<body bgcolor="red">
+    <h1>Fauna Representativa de México</h1>
+    <p>México es uno de los países con mayor biodiversidad en el mundo. Algunas especies representativas son:</p>
+    <ul>
+        <li><strong>Jaguar</strong> – Uno de los felinos más grandes de América.</li>
+        <li><strong>Ajolote</strong> – Anfibio endémico del Valle de México.</li>
+        <li><strong>Águila real</strong> – Símbolo nacional de México.</li>
+        <li><strong>Mono araña</strong> – Habita en las selvas tropicales del sur del país.</li>
+        <li><strong>Ocelote</strong> – Felino de tamaño mediano que vive en zonas boscosas.</li>
+    </ul>
+
+    
+
+    <script>
+        // Comprobar si el usuario está autenticado
+        if (sessionStorage.getItem('loggedIn') !== 'true') {
+            // Si no está autenticado, redirigir a login
+            window.location.href = 'index.html';
+        }
+
+        // Al hacer clic en cerrar sesión
+        document.getElementById('logoutBtn').addEventListener('click', function() {
+            sessionStorage.removeItem('loggedIn');
+        });
+    </script>
+</body>
+</html>
